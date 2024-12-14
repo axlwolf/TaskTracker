@@ -7,7 +7,7 @@ import "../scss/style.scss";
 
 window.onload = () => {
   console.log("Paste your code here!");
-  DatePicker.init();
+  TaskTracker.init();
 };
 
 document.addEventListener("DOMContentLoaded", () => {

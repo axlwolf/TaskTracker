@@ -1,47 +1,74 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head itemscope itemtype="http://schema.org/WebSite">
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="msapplication-tap-highlight" content="no"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<html lang="en">
+  <head itemscope itemtype="http://schema.org/WebSite">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Roadmap Project: Task Tracker</title>
     <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-            crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
     />
-    <meta name="author" content="Axel Lanuza"/>
-    <meta name="keywords" content="Roadmap Project, Task Tracker"/>
-    <meta name="description" content="Create a task tracker with a to-do list using JavaScript."/>
-
-    <meta itemprop="name" content="Task Tracker Project"/>
+    <meta name="author" content="Axel Lanuza" />
+    <meta name="keywords" content="Roadmap Project, Task Tracker" />
     <meta
-            itemprop="description"
-            content="Create a task tracker with a to-do list using JavaScript."
+      name="description"
+      content="Create a task tracker with a to-do list using JavaScript."
     />
-    <link type="text/plain" rel="author" href="humans.txt"/>
-    <link rel="stylesheet" href="./css/app.css"/>
 
-    <!--[if IE
-      ]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script
+    <meta itemprop="name" content="Task Tracker Project" />
+    <meta
+      itemprop="description"
+      content="Create a task tracker with a to-do list using JavaScript."
+    />
+    <link type="text/plain" rel="author" href="humans.txt" />
+    <link rel="stylesheet" href="./css/app.css" />
+
+    <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script
     ><![endif]-->
-</head>
+  </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+  <body itemscope itemtype="http://schema.org/WebPage">
     <!-- main start -->
 
     <main role="main">
-        <section class="grid-layout">
-            <img src="https://placehold.co/600x400/000000/FFF" alt="">
+      <section class="grid-layout">
+        <img
+          src="https://placehold.co/600x300/03122f/white?font=roboto&text=Task Tracker"
+          alt="Task Tracker Banner"
+        />
+      </section>
+      <div class="task-tracker">
+        <section class="task-tracker__title">
+          <h1>Task Tracker</h1>
         </section>
+        <section class="task-tracker__add-tasks">
+          <label for="new-task-input">
+            <input
+              type="text"
+              id="new-task-input"
+              class="add-task"
+              placeholder="Start writing and press Enter to create a new task"
+            />
+          </label>
+          <button title="Add task" role="button" class="add-task-button">
+            <i class="fas fa-level-down-alt"></i>
+          </button>
+        </section>
+        <section class="task-tracker__list">
+          <ul>
+            <!-- Task items will be added here dynamically -->
+          </ul>
+        </section>
+      </div>
     </main>
 
     <!-- main end -->
 
-    <script type="text/javascript" src="../build/app.js"></script>
-</body>
+    <script type="text/javascript" src="../build/app.js" defer></script>
+  </body>
 </html>
