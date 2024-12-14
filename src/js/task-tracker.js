@@ -20,11 +20,15 @@ export const TaskTracker = (() => {
   // Sets up event handlers
   const eventHandlers = () => {
     $addTaskBtn.addEventListener("click", addTask); // Event to add a task
-    $input.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === "Return") {
-        addTask(); // Triggers addTask function on Enter/Return key press
-      }
-    });
+    $input.addEventListener("keydown", handleKeyPress);
+  };
+
+  // Handles key press events on the input
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter" || event.key === "Return") {
+      event.preventDefault(); // Prevents default action to avoid form submission
+      addTask(); // Triggers addTask function on Enter/Return key press
+    }
   };
 
   // Adds a new task to the list
